@@ -1,0 +1,4 @@
+config.env
+state.json
+*.local
+.DS_Store
