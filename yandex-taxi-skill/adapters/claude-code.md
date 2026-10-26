@@ -1,8 +1,8 @@
 # Adapter: Claude Code и Claude Desktop
 
 Claude Code:
-- Положи папку в `~/.claude/skills/yandex-taxi-kit/` (глобально) или `.claude/skills/yandex-taxi-kit/` (проект). SKILL.md грузится по описанию.
-- Нужен bash-доступ: все шаги идут через `scripts/yandex-taxi.sh`. В разрешениях (`permissions.allow`) добавь `Bash(~/.claude/skills/yandex-taxi-kit/scripts/yandex-taxi.sh:*)` и `Bash(agent-browser:*)`.
+- Положи папку в `~/.claude/skills/yandex-taxi-skill/` (глобально) или `.claude/skills/yandex-taxi-skill/` (проект). SKILL.md грузится по описанию.
+- Нужен bash-доступ: все шаги идут через `scripts/yandex-taxi.sh`. В разрешениях (`permissions.allow`) добавь `Bash(~/.claude/skills/yandex-taxi-skill/scripts/yandex-taxi.sh:*)` и `Bash(agent-browser:*)`.
 - Команду `confirm --yes` лучше НЕ добавлять в авторазрешённые: пусть Claude Code каждый раз просит подтверждение. Это встроенный второй ключ.
 
 Claude Desktop:

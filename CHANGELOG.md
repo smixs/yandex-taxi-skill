@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 - 2026-10-26
+
+- Renamed the project from `yandex-taxi-kit` to `yandex-taxi-skill` ("Yandex Taxi Skill"). The old GitHub address redirects. Skill name, folder and archive are now `yandex-taxi-skill`.
+- New banner and a separate 1280x640 social preview.
+- Config path is now `~/.config/yandex-taxi-skill/`. If you used the old folder `~/.config/yandex-taxi-kit/`, move it.
+
 ## 1.0.0 - 2026-10-26
 
 First public release.

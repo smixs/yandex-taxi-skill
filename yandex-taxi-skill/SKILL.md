@@ -1,5 +1,5 @@
 ---
-name: yandex-taxi-kit
+name: yandex-taxi-skill
 description: "Order Yandex Taxi (taxi.yandex.uz and other country sites) from an agent through a browser: price quote, order, track the car. Use when the owner says «такси до…», «вызови такси», «сколько стоит доехать», «где машина», «поехать от … до …», or sends a Telegram location with no words — even if the word «Яндекс» is not said. Also use to set up the kit on a new machine (browser, QR login, card, places, tariffs). Do NOT use for Uber, Bolt, inDrive, delivery or booking a taxi by phone."
 ---
 

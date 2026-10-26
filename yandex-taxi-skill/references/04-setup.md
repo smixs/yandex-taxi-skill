@@ -1,6 +1,6 @@
 # 04. Настройка: места, тарифы, карта, имя
 
-1. `mkdir -p ~/.config/yandex-taxi-kit && cp config.example.env ~/.config/yandex-taxi-kit/config.env && chmod 600` на этот файл. Или `export TAXI_CONFIG=путь`.
+1. `mkdir -p ~/.config/yandex-taxi-skill && cp config.example.env ~/.config/yandex-taxi-skill/config.env && chmod 600` на этот файл. Или `export TAXI_CONFIG=путь`.
 2. Впиши:
    - `TAXI_HOST` - сайт страны.
    - `STATE` - где лежит вход.

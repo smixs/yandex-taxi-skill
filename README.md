@@ -1,10 +1,10 @@
-<p align="center"><img src="assets/banner.png" alt="yandex-taxi-kit: an AI agent skill for Yandex Taxi" width="100%"></p>
+<p align="center"><img src="assets/banner.png" alt="Yandex Taxi Skill: an AI agent skill for Yandex Taxi" width="100%"></p>
 
-# yandex-taxi-kit
+# Yandex Taxi Skill
 
 **Yandex Taxi (Yandex Go) for your AI agent.** An Agent Skill that lets Iva, Claude Code, Codex or any agent with a shell and a browser check prices, prepare a ride and track the car on taxi.yandex.uz - and order only after your explicit "yes".
 
-[English](#english) | [Русский](#русский) | [MIT License](LICENSE) | [Release v1.0.0](https://github.com/smixs/yandex-taxi-kit/releases/tag/v1.0.0)
+[English](#english) | [Русский](#русский) | [MIT License](LICENSE) | [Release v1.1.0](https://github.com/smixs/yandex-taxi-skill/releases/tag/v1.1.0)
 
 ---
 
@@ -12,27 +12,27 @@
 
 ### What it is and who it is for
 
-`yandex-taxi-kit` is a portable skill for AI agents. You say "taxi to the airport" in Telegram (or any chat), and the agent opens Yandex Taxi in a headless browser ([agent-browser](https://github.com/vercel-labs/agent-browser)), reads tariffs and prices, picks an allowed tariff, checks the payment card and shows you the summary. It presses "Order" only when you confirm.
+**Yandex Taxi Skill** is a portable skill for AI agents. You say "taxi to the airport" in Telegram (or any chat), and the agent opens Yandex Taxi in a headless browser ([agent-browser](https://github.com/vercel-labs/agent-browser)), reads tariffs and prices, picks an allowed tariff, checks the payment card and shows you the summary. It presses "Order" only when you confirm.
 
 It is for people who live where Yandex Taxi works (Uzbekistan, Russia, Kazakhstan and nearby) and already use an AI agent for daily tasks. There is no official public API for ordering, so the kit drives the website like a person would.
 
 ### Install
 
-The skill folder is `yandex-taxi-kit/`. You can also download the packed `yandex-taxi-kit.skill` (a zip) from the [release](https://github.com/smixs/yandex-taxi-kit/releases/tag/v1.0.0).
+The skill folder is `yandex-taxi-skill/`. You can also download the packed `yandex-taxi-skill.skill` (a zip) from the [release](https://github.com/smixs/yandex-taxi-skill/releases/tag/v1.1.0).
 
-**Iva** ([smixs/iva-agent](https://github.com/smixs/iva-agent)): copy the folder to `data/custom/agent/skills/yandex-taxi-kit/`. It is picked up on the next turn.
+**Iva** ([smixs/iva-agent](https://github.com/smixs/iva-agent)): copy the folder to `data/custom/agent/skills/yandex-taxi-skill/`. It is picked up on the next turn.
 
-**Claude Code**: copy to `~/.claude/skills/yandex-taxi-kit/` (global) or `.claude/skills/yandex-taxi-kit/` (project). Allow `Bash(~/.claude/skills/yandex-taxi-kit/scripts/yandex-taxi.sh:*)` and `Bash(agent-browser:*)`. Do not auto-allow `confirm --yes`: let Claude Code ask each time.
+**Claude Code**: copy to `~/.claude/skills/yandex-taxi-skill/` (global) or `.claude/skills/yandex-taxi-skill/` (project). Allow `Bash(~/.claude/skills/yandex-taxi-skill/scripts/yandex-taxi.sh:*)` and `Bash(agent-browser:*)`. Do not auto-allow `confirm --yes`: let Claude Code ask each time.
 
-**Codex**: Codex does not load SKILL.md by itself. Put the folder in your repo or home directory and add a short block to `AGENTS.md` (see [adapters/codex.md](yandex-taxi-kit/adapters/codex.md)).
+**Codex**: Codex does not load SKILL.md by itself. Put the folder in your repo or home directory and add a short block to `AGENTS.md` (see [adapters/codex.md](yandex-taxi-skill/adapters/codex.md)).
 
-**Any other agent**: it needs a shell, network and [agent-browser](https://github.com/vercel-labs/agent-browser). Tell it to read `yandex-taxi-kit/SKILL.md` first. See [adapters/no-telegram.md](yandex-taxi-kit/adapters/no-telegram.md) if you have no Telegram.
+**Any other agent**: it needs a shell, network and [agent-browser](https://github.com/vercel-labs/agent-browser). Tell it to read `yandex-taxi-skill/SKILL.md` first. See [adapters/no-telegram.md](yandex-taxi-skill/adapters/no-telegram.md) if you have no Telegram.
 
 ### Quick start
 
-1. Copy `yandex-taxi-kit/config.example.env` to `~/.config/yandex-taxi-kit/config.env`, then `chmod 600` it.
+1. Copy `yandex-taxi-skill/config.example.env` to `~/.config/yandex-taxi-skill/config.env`, then `chmod 600` it.
 2. Fill in your site (`taxi.yandex.uz`), account name, card label, allowed tariffs and places (`PLACE_home="lat,lon"`).
-3. Ask the agent: "run the yandex-taxi-kit stage check". It runs `scripts/yandex-taxi.sh stage` and tells you the first missing step: browser, login, card.
+3. Ask the agent: "run the yandex-taxi-skill stage check". It runs `scripts/yandex-taxi.sh stage` and tells you the first missing step: browser, login, card.
 4. Log in once by QR code with your own phone. The login is saved to a local `state.json` (mode 600).
 5. Say "taxi from home to work". The agent shows the tariff, price and pickup time. Reply "yes" to order.
 
@@ -84,7 +84,7 @@ Checked on **taxi.yandex.uz** (Tashkent, Uzbekistan). Other Yandex Taxi sites (.
 
 **Which tariffs does it pick?** Only those in `ALLOWED_TARIFFS`, by priority and pickup time. Example config: `Business|Электрик`.
 
-**Can I use it without Telegram?** Yes. Send an address or coordinates as text. See [adapters/no-telegram.md](yandex-taxi-kit/adapters/no-telegram.md).
+**Can I use it without Telegram?** Yes. Send an address or coordinates as text. See [adapters/no-telegram.md](yandex-taxi-skill/adapters/no-telegram.md).
 
 ### License
 
@@ -96,24 +96,24 @@ Checked on **taxi.yandex.uz** (Tashkent, Uzbekistan). Other Yandex Taxi sites (.
 
 ### Что это и кому нужно
 
-`yandex-taxi-kit` - скилл для ИИ-агента, который вызывает **Яндекс Такси** (Яндекс Go) через браузер. Вы пишете агенту в Telegram «такси до аэропорта». Агент открывает сайт, читает тарифы и цены, выбирает разрешённый тариф, проверяет карту и показывает итог. «Заказать» он нажимает только после вашего явного «да».
+**Yandex Taxi Skill** - скилл для ИИ-агента, который вызывает **Яндекс Такси** (Яндекс Go) через браузер. Вы пишете агенту в Telegram «такси до аэропорта». Агент открывает сайт, читает тарифы и цены, выбирает разрешённый тариф, проверяет карту и показывает итог. «Заказать» он нажимает только после вашего явного «да».
 
 Подходит тем, кто живёт там, где работает Яндекс Такси (Узбекистан, Россия, Казахстан и соседи), и уже пользуется ИИ-агентом: Ива, Claude Code, Codex или другим. Публичного API для заказа поездки клиентом нет, поэтому скилл ведёт сайт так же, как человек.
 
 ### Установка
 
-Папка скилла - `yandex-taxi-kit/`. Готовый архив `yandex-taxi-kit.skill` (обычный zip) лежит в [релизе](https://github.com/smixs/yandex-taxi-kit/releases/tag/v1.0.0).
+Папка скилла - `yandex-taxi-skill/`. Готовый архив `yandex-taxi-skill.skill` (обычный zip) лежит в [релизе](https://github.com/smixs/yandex-taxi-skill/releases/tag/v1.1.0).
 
-- **Ива** ([smixs/iva-agent](https://github.com/smixs/iva-agent)): положите папку в `data/custom/agent/skills/yandex-taxi-kit/`. Подхватится на следующем ходе.
-- **Claude Code**: `~/.claude/skills/yandex-taxi-kit/` (для всех проектов) или `.claude/skills/yandex-taxi-kit/` (для проекта). Разрешите `Bash(~/.claude/skills/yandex-taxi-kit/scripts/yandex-taxi.sh:*)` и `Bash(agent-browser:*)`. Команду `confirm --yes` в авторазрешения не добавляйте.
-- **Codex**: добавьте короткий блок в `AGENTS.md`, пример в [adapters/codex.md](yandex-taxi-kit/adapters/codex.md).
-- **Другой агент**: нужны shell, сеть и [agent-browser](https://github.com/vercel-labs/agent-browser). Попросите его прочитать `yandex-taxi-kit/SKILL.md`. Без Telegram - [adapters/no-telegram.md](yandex-taxi-kit/adapters/no-telegram.md).
+- **Ива** ([smixs/iva-agent](https://github.com/smixs/iva-agent)): положите папку в `data/custom/agent/skills/yandex-taxi-skill/`. Подхватится на следующем ходе.
+- **Claude Code**: `~/.claude/skills/yandex-taxi-skill/` (для всех проектов) или `.claude/skills/yandex-taxi-skill/` (для проекта). Разрешите `Bash(~/.claude/skills/yandex-taxi-skill/scripts/yandex-taxi.sh:*)` и `Bash(agent-browser:*)`. Команду `confirm --yes` в авторазрешения не добавляйте.
+- **Codex**: добавьте короткий блок в `AGENTS.md`, пример в [adapters/codex.md](yandex-taxi-skill/adapters/codex.md).
+- **Другой агент**: нужны shell, сеть и [agent-browser](https://github.com/vercel-labs/agent-browser). Попросите его прочитать `yandex-taxi-skill/SKILL.md`. Без Telegram - [adapters/no-telegram.md](yandex-taxi-skill/adapters/no-telegram.md).
 
 ### Быстрый старт
 
-1. Скопируйте `yandex-taxi-kit/config.example.env` в `~/.config/yandex-taxi-kit/config.env` и выполните `chmod 600`.
+1. Скопируйте `yandex-taxi-skill/config.example.env` в `~/.config/yandex-taxi-skill/config.env` и выполните `chmod 600`.
 2. Впишите сайт (`taxi.yandex.uz`), имя аккаунта, подпись карты, разрешённые тарифы и места (`PLACE_home="широта,долгота"`).
-3. Скажите агенту: «запусти проверку стадии yandex-taxi-kit». Он выполнит `scripts/yandex-taxi.sh stage` и назовёт первый недостающий шаг.
+3. Скажите агенту: «запусти проверку стадии yandex-taxi-skill». Он выполнит `scripts/yandex-taxi.sh stage` и назовёт первый недостающий шаг.
 4. Один раз войдите по QR-коду со своего телефона. Вход сохранится в локальный `state.json` (права 600).
 5. Напишите «такси из дома на работу». Агент покажет тариф, цену и время подачи. Ответьте «да», чтобы заказать.
 

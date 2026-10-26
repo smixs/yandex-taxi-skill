@@ -1,15 +1,15 @@
-# yandex-taxi-kit
+# Yandex Taxi Skill
 
 > Agent Skill that lets an AI agent (Iva, Claude Code, Codex, any agent with a shell and agent-browser) get a Yandex Taxi / Yandex Go price quote, prepare an order and track the car in a browser on taxi.yandex.uz. It orders only after an explicit "yes" from the owner. Skill на русском: Яндекс Такси для ИИ-агента.
 
 License: MIT. Author: Serge Shima. Version 1.0.0. Verified on taxi.yandex.uz (Uzbekistan); other countries may differ. The order click and live tracking were not tested.
 
 ## Docs
-- [README](https://github.com/smixs/yandex-taxi-kit/blob/main/README.md): install, quick start, safety, FAQ (English and Russian)
-- [SKILL.md](https://github.com/smixs/yandex-taxi-kit/blob/main/yandex-taxi-kit/SKILL.md): entry point for the agent, stage table and rules
-- [Script](https://github.com/smixs/yandex-taxi-kit/blob/main/yandex-taxi-kit/scripts/yandex-taxi.sh): preflight, stage, quote, prepare, confirm --yes, status, close
-- [Config template](https://github.com/smixs/yandex-taxi-kit/blob/main/yandex-taxi-kit/config.example.env)
-- [Adapters](https://github.com/smixs/yandex-taxi-kit/tree/main/yandex-taxi-kit/adapters): Iva, Claude Code, Codex, no Telegram
+- [README](https://github.com/smixs/yandex-taxi-skill/blob/main/README.md): install, quick start, safety, FAQ (English and Russian)
+- [SKILL.md](https://github.com/smixs/yandex-taxi-skill/blob/main/yandex-taxi-skill/SKILL.md): entry point for the agent, stage table and rules
+- [Script](https://github.com/smixs/yandex-taxi-skill/blob/main/yandex-taxi-skill/scripts/yandex-taxi.sh): preflight, stage, quote, prepare, confirm --yes, status, close
+- [Config template](https://github.com/smixs/yandex-taxi-skill/blob/main/yandex-taxi-skill/config.example.env)
+- [Adapters](https://github.com/smixs/yandex-taxi-skill/tree/main/yandex-taxi-skill/adapters): Iva, Claude Code, Codex, no Telegram
 
 ## Release
-- [v1.0.0](https://github.com/smixs/yandex-taxi-kit/releases/tag/v1.0.0): yandex-taxi-kit.skill archive
+- [v1.1.0](https://github.com/smixs/yandex-taxi-skill/releases/tag/v1.1.0): yandex-taxi-skill.skill archive

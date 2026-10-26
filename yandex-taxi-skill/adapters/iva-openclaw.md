@@ -1,7 +1,7 @@
 # Adapter: Iva / OpenClaw
 
-- Положи папку набора в каталог пользовательских скиллов агента (`data/custom/agent/skills/yandex-taxi-kit/` у Iva). Подхватится на следующем ходе.
-- Конфиг: `~/.config/yandex-taxi-kit/config.env` (или `TAXI_CONFIG`).
+- Положи папку набора в каталог пользовательских скиллов агента (`data/custom/agent/skills/yandex-taxi-skill/` у Iva). Подхватится на следующем ходе.
+- Конфиг: `~/.config/yandex-taxi-skill/config.env` (или `TAXI_CONFIG`).
 - Геопозиция: блок `[telegram_location]` в ходе. Кнопки «Куда едем?» - как в `rich-replies`.
 - Скриншот владельцу - `send_file`. Слежка - `remind` каждые 3-5 минут.
 - Правило автозаказа и предпочтения владельца запиши в его `rules.md` одной строкой («на „такси до X“ заказывай сразу тарифом из config»), чтобы confirm шёл без вопроса.

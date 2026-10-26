@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Яндекс Такси через agent-browser. Конфиг: $TAXI_CONFIG или ~/.config/yandex-taxi-kit/config.env
+# Яндекс Такси через agent-browser. Конфиг: $TAXI_CONFIG или ~/.config/yandex-taxi-skill/config.env
 #   preflight                 - браузер, ОС, сеть, гео-блок, конфиг, state
 #   stage                     - определить стадию (одно слово) и шаг, куда прыгать
 #   state-check [файл]        - проверить state: JSON, Session_id, права 600
@@ -13,10 +13,10 @@
 # Коды выхода: 2 ТОЧКА, 3 LOGIN_LOST, 4 NO_TARIFFS, 5 NO_ALLOWED, 6 TARIFF_FAIL, 7 CARD_FAIL,
 #              8 NO_ORDER_BUTTON, 9 GEO_BLOCK, 10 NO_BROWSER, 11 NO_CONFIG, 12 NO_STATE, 13 NOT_CONFIGURED
 set -u
-CONF="${TAXI_CONFIG:-$HOME/.config/yandex-taxi-kit/config.env}"
+CONF="${TAXI_CONFIG:-$HOME/.config/yandex-taxi-skill/config.env}"
 # defaults
-TAXI_HOST=taxi.yandex.uz; LANG_UI=ru; SESSION=taxi-kit; STATE="$HOME/.config/yandex-taxi-kit/state.json"
-TMP=/tmp/yandex-taxi-kit; ACCOUNT_NAME=""; CARD_LABEL=""; ALLOWED_TARIFFS="Business|Электрик"
+TAXI_HOST=taxi.yandex.uz; LANG_UI=ru; SESSION=taxi-kit; STATE="$HOME/.config/yandex-taxi-skill/state.json"
+TMP=/tmp/yandex-taxi-skill; ACCOUNT_NAME=""; CARD_LABEL=""; ALLOWED_TARIFFS="Business|Электрик"
 if [ -f "$CONF" ]; then . "$CONF"; HAVE_CONF=1; else HAVE_CONF=0; fi
 mkdir -p "$TMP"
 AB="agent-browser --session $SESSION"
